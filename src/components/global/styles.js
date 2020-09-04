@@ -6,14 +6,14 @@ import normalize from "./ref/normalize"
 const global_styles = css`
   html {
     font-size: 62.5%;
-    line-height: 1.45;
+    line-height: 1.65;
     box-sizing: border-box;
-    color: ${colors.black};
-    font-family: ${fonts.nunito};
+    color: ${colors.white};
+    font-family: ${fonts.bai};
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
-    background: white;
+    background: ${colors.black};
   }
 
   *,
@@ -23,8 +23,9 @@ const global_styles = css`
   }
 
   body {
-    font-size: 2px;
-    font-size: 2rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 400;
   }
 
   #site-wrapper {
@@ -57,6 +58,8 @@ const global_styles = css`
   h5,
   h6 {
     margin: 0rem;
+    font-family: ${fonts.exo};
+    font-style: italic;
   }
 
   hgroup {
@@ -132,7 +135,7 @@ const global_styles = css`
 
   *.text-md,
   *.text-md * {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .highlighted p:first-of-type,

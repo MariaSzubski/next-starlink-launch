@@ -5,8 +5,8 @@ import Grid from "../components/grid-system"
 
 const IndexPage = () => (
   <Layout title="Home">
-    <h1>Welcome</h1>
-    <div className="content text-md">
+    <h1>Next Starlink Launch</h1>
+    <div className="text-md">
       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
       ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
       mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.

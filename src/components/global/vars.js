@@ -1,16 +1,16 @@
 export const colors = {
-  white:    '#E6E8EE',
-  gray100:  '#D1D3E7',
-  black:    '#000000',
+  white: "#FFFFFF",
+  gray100: "#D1D3E7",
+  black: "#172033",
 
-  yellow:   '#FEC52E',
-  green:    '#009978',
-  blue:     '#004876',
+  yellow: "#FEC52E",
+  green: "#009978",
+  blue: "#004876",
 }
 
 export const fonts = {
-  nunito: "Nunito, 'Century Gothic', 'Lucida Grande', sans-serif",
-  hack: "Hack, Courier, monospace",
+  bai: "'Bai Jamjuree', 'Lucida Grande', sans-serif",
+  exo: "Exo, 'Lucida Grande', sans-serif",
 }
 
 // breakpoints

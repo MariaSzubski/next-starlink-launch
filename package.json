@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-mszd",
+  "name": "next-starlink-launch",
   "private": true,
-  "description": "Gatsby Starter Repo for Maria Szubski Digital, LLC",
+  "description": "Tracking the progress of the Starlink constellation.",
   "version": "1.0.0",
   "author": "Maria Szubski <hello@mariaszubski.com>",
   "dependencies": {

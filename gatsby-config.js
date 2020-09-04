@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Maria Szubski Digital's Gatsby Starter`,
-    description: ``,
+    title: `Next Starlink Launch`,
+    description: `Tracking the progress of the Starlink constellation`,
     author: `Maria Szubski <hello@mariaszubski.com>`,
   },
   plugins: [
@@ -9,7 +9,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
@@ -43,9 +43,7 @@ module.exports = {
       options: {
         env: {
           production: {
-            policy: [
-              { userAgent: "*" },
-            ],
+            policy: [{ userAgent: "*" }],
           },
           "branch-deploy": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
@@ -63,8 +61,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-mszd`,
-        short_name: `MSD's Gatsby Starter`,
+        name: `Next Starlink Launch`,
+        short_name: `Next Starlink Launch`,
         start_url: `/`,
         background_color: `#1D2226`,
         theme_color: `#161528`,
@@ -78,17 +76,18 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Nunito",
-              variants: ["300", "400", "600", "700"],
-              // fontDisplay: 'swap',
-              // strategy: 'selfHosted' // 'base64' || 'cdn'
+              family: "Bai Jamjuree",
+              variants: ["300", "400", "600"],
+            },
+            {
+              family: "Exo",
+              variants: ["600", "700", "800", "800i"],
             },
           ],
         },
         useMinify: true,
         usePreload: true,
         usePreconnect: true,
-        //formats: ['woff2', 'woff'],
       },
     },
   ],
