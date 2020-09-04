@@ -1,0 +1,8 @@
+{
+  "endOfLine": "lf",
+  "semi": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "proseWrap": "never",
+  "arrowParens": "avoid"
+}
