@@ -28,6 +28,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'SXAPI',
+        fieldName: 'space',
+        url: 'https://api.spacex.land/graphql/',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
