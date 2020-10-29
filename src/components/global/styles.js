@@ -13,7 +13,7 @@ const global_styles = css`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
-    background: ${colors.black};
+    background: linear-gradient( 150deg, ${colors.navy} 8%, ${colors.black} 100% );
   }
 
   *,
