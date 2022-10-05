@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const colors = {
   white: "#FFFFFF",
   gray100: "#D1D3E7",
@@ -42,3 +43,4 @@ export const screen = {
     xxl: `(max-width: ${bp.xxl - 1}px)`,
   },
 }
+/* eslint-enable */

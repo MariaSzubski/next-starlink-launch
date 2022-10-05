@@ -48,24 +48,24 @@ const Grid = ({ children, ...props }) => (
 )
 
 Grid.propTypes = {
-  fluid: PropTypes.bool,
-  gap: PropTypes.string,
-  template: PropTypes.string,
-  mobile: PropTypes.string,
-  justify: PropTypes.string,
   align: PropTypes.string,
-
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
+  fluid: PropTypes.bool,
+  gap: PropTypes.string,
+  justify: PropTypes.string,
+
+  mobile: PropTypes.string,
+  template: PropTypes.string,
 }
 
 Grid.defaultProps = {
+  align: "start",
   fluid: false,
   gap: "1.4rem",
-  template: "repeat(auto-fit, minmax(350px, 1fr))",
-  mobile: null,
   justify: "start",
-  align: "start",
+  mobile: null,
+  template: "repeat(auto-fit, minmax(350px, 1fr))",
 }
 
 export { Grid }

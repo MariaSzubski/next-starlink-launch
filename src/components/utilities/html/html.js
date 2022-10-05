@@ -13,12 +13,12 @@ const HTML = ({ content, className }) => (
 )
 
 HTML.propTypes = {
+  className: PropTypes.string,
   content: PropTypes.shape({
     childMarkdownRemark: PropTypes.shape({
       html: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-  className: PropTypes.string,
 }
 
 export default HTML

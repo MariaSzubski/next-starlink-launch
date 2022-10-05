@@ -52,15 +52,17 @@ const SCol = styled.div`
 `
 
 const Col = ({ children, offset, ...props }) => {
-  let xs = props.xs || 12
-  let sm = props.sm || props.xs || 12
-  let md = props.md || props.sm || props.xs || 12
-  let lg = props.lg || props.md || props.sm || props.xs || 12
-  let xl = props.xl || props.lg || props.md || props.sm || props.xs || 12
-  let xxl =
+  const xs = props.xs || 12
+  const sm = props.sm || props.xs || 12
+  const md = props.md || props.sm || props.xs || 12
+  const lg = props.lg || props.md || props.sm || props.xs || 12
+  const xl = props.xl || props.lg || props.md || props.sm || props.xs || 12
+  const xxl =
     props.xxl || props.xl || props.lg || props.md || props.sm || props.xs || 12
 
-  let $offset = {
+  /* eslint-disable */
+  const $offset = {
+
     xs: offset.xs || 0,
     sm: offset.sm || offset.xs || 0,
     md: offset.md || offset.sm || offset.xs || 0,
@@ -75,6 +77,7 @@ const Col = ({ children, offset, ...props }) => {
       offset.xs ||
       0,
   }
+  /* eslint-enable */
 
   const calculate = val => ((val / 12) * 100).toString().concat("%")
 
@@ -98,25 +101,29 @@ const Col = ({ children, offset, ...props }) => {
 }
 
 Col.propTypes = {
-  nowrap: PropTypes.bool,
-  justify: PropTypes.string,
   align: PropTypes.string,
   children: PropTypes.node,
-  offset: PropTypes.object,
   fluid: PropTypes.bool,
+  justify: PropTypes.string,
+  nowrap: PropTypes.bool,
+  offset: PropTypes.object,
+  /* eslint-disable */
   xs: PropTypes.number,
   sm: PropTypes.number,
   md: PropTypes.number,
   lg: PropTypes.number,
   xl: PropTypes.number,
   xxl: PropTypes.number,
+
+    /* eslint-enable */
 }
 
 Col.defaultProps = {
-  nowrap: false,
-  justify: "flex-start",
   align: "flex-start",
   fluid: false,
+  justify: "flex-start",
+  nowrap: false,
+    /* eslint-disable */
   offset: {
     xs: null,
     sm: null,
@@ -131,6 +138,8 @@ Col.defaultProps = {
   lg: null,
   xl: null,
   xxl: null,
+
+    /* eslint-enable */
 }
 
 export { Col }

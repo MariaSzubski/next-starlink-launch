@@ -25,18 +25,18 @@ const Flex = ({ children, ...props }) => (
 )
 
 Flex.propTypes = {
-  nowrap: PropTypes.bool,
-  justify: PropTypes.string,
   align: PropTypes.string,
   children: PropTypes.node.isRequired,
   fluid: PropTypes.bool,
+  justify: PropTypes.string,
+  nowrap: PropTypes.bool,
 }
 
 Flex.defaultProps = {
-  nowrap: false,
-  justify: "flex-start",
   align: "normal",
   fluid: false,
+  justify: "flex-start",
+  nowrap: false,
 }
 
 export { Flex }
