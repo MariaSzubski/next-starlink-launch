@@ -16,21 +16,22 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
     {
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets`,
       },
-      resolve: `gatsby-source-filesystem`,
     },
     {
+      resolve: "gatsby-source-graphql",
       options: {
         fieldName: "space",
         typeName: "SXAPI",
         url: "https://api.spacex.land/graphql/",
       },
-      resolve: "gatsby-source-graphql",
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         anonymize: true,
         defer: true,
@@ -39,9 +40,9 @@ module.exports = {
         respectDNT: true,
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
       },
-      resolve: `gatsby-plugin-google-analytics`,
     },
     {
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         env: {
           "branch-deploy": {
@@ -59,9 +60,9 @@ module.exports = {
           },
         },
       },
-      resolve: "gatsby-plugin-robots-txt",
     },
     {
+      resolve: `gatsby-plugin-manifest`,
       options: {
         background_color: `#1D2226`,
         display: `minimal-ui`,
@@ -71,9 +72,9 @@ module.exports = {
         start_url: `/`,
         theme_color: `#161528`,
       },
-      resolve: `gatsby-plugin-manifest`,
     },
     {
+      resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
           google: [
@@ -91,8 +92,7 @@ module.exports = {
         usePreconnect: true,
         usePreload: true,
       },
-      resolve: `gatsby-plugin-webfonts`,
     },
-  ]
+  ],
 }
 /* eslint-enable */
