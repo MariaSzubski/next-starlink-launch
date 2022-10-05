@@ -2,9 +2,9 @@ import fetch from 'cross-fetch';
 import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 export const client = new ApolloClient({
+  cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: 'https://api.spacex.land/graphql',
     fetch,
-  }),
-  cache: new InMemoryCache()
+    uri: 'https://api.spacex.land/graphql',
+  })
 });

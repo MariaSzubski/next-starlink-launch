@@ -70,7 +70,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint -c .eslintrc.js ./*src && stylelint --config stylelint.config.js './src/**/*.scss'"
+    "lint": "eslint -c .eslintrc.js ./*src && stylelint --config stylelint.config.js './src/**/*.css'"
   },
   "repository": {
     "type": "git",
