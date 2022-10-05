@@ -3,12 +3,12 @@ module.exports = {
   siteMetadata: {
     author: `Maria Szubski <hello@mariaszubski.com>`,
     description: `Tracking the progress of the Starlink constellation`,
+    siteUrl: "https://tourmaline-starburst-6fc080.netlify.app",
     title: `Next Starlink Launch`,
   },
   trailingSlash: "never",
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
