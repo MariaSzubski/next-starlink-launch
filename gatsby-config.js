@@ -4,13 +4,13 @@ module.exports = {
     description: `Tracking the progress of the Starlink constellation`,
     author: `Maria Szubski <hello@mariaszubski.com>`,
   },
+  trailingSlash: "never",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-offline",
-    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
     {
@@ -28,11 +28,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-graphql',
+      resolve: "gatsby-source-graphql",
       options: {
-        typeName: 'SXAPI',
-        fieldName: 'space',
-        url: 'https://api.spacex.land/graphql/',
+        typeName: "SXAPI",
+        fieldName: "space",
+        url: "https://api.spacex.land/graphql/",
       },
     },
     {

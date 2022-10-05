@@ -44,7 +44,6 @@
     "@storybook/addons": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "babel-loader": "^8.2.5",
-    "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
     "prettier": "2.7.1",
     "react-is": "^18.2.0"
   },
