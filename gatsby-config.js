@@ -13,13 +13,7 @@ module.exports = {
     "gatsby-plugin-offline",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        commonmark: true,
-        plugins: [],
-      },
-    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
