@@ -51,7 +51,10 @@
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-storybook": "^0.6.4",
     "prettier": "2.7.1",
-    "react-is": "^18.2.0"
+    "react-is": "^18.2.0",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-scss": "^4.3.0"
   },
   "keywords": [
     "gatsby"
@@ -66,7 +69,8 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint -c .eslintrc.js ./*src && stylelint --config stylelint.config.js './src/**/*.scss'"
   },
   "repository": {
     "type": "git",
