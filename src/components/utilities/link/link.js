@@ -14,7 +14,7 @@ const Link = ({ children, to, activeClassName, target, ...props }) => {
   const external = (
     <a
       href={to}
-      target={target ? target : null}
+      target={target && target}
       rel={target === "_blank" ? "noreferrer" : ""}
       {...props}
     >
@@ -26,10 +26,11 @@ const Link = ({ children, to, activeClassName, target, ...props }) => {
 }
 
 Link.propTypes = {
+    // external links
+  activeClassName: PropTypes.string,
   children: PropTypes.node.isRequired,
-  to: PropTypes.string.isRequired,
-  target: PropTypes.string, // external links
-  activeClassName: PropTypes.string, // internal links
+  target: PropTypes.string, 
+    to: PropTypes.string.isRequired, // internal links
 }
 
 Link.defaultProps = {

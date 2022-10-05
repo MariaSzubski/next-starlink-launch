@@ -1,25 +1,20 @@
+/* eslint-disable */
 module.exports = {
   siteMetadata: {
-    title: `Next Starlink Launch`,
-    description: `Tracking the progress of the Starlink constellation`,
     author: `Maria Szubski <hello@mariaszubski.com>`,
+    description: `Tracking the progress of the Starlink constellation`,
+    siteUrl: "https://tourmaline-starburst-6fc080.netlify.app",
+    title: `Next Starlink Launch`,
   },
+  trailingSlash: "never",
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-offline",
-    `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        commonmark: true,
-        plugins: [],
-      },
-    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,40 +23,40 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-graphql',
+      resolve: "gatsby-source-graphql",
       options: {
-        typeName: 'SXAPI',
-        fieldName: 'space',
-        url: 'https://api.spacex.land/graphql/',
+        fieldName: "space",
+        typeName: "SXAPI",
+        url: "https://api.spacex.land/graphql/",
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-        head: true,
         anonymize: true,
-        respectDNT: true,
-        pageTransitionDelay: 0,
         defer: true,
+        head: true,
+        pageTransitionDelay: 0,
+        respectDNT: true,
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
       },
     },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         env: {
-          production: {
-            policy: [{ userAgent: "*" }],
-          },
           "branch-deploy": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
             host: null,
+            policy: [{ disallow: ["/"], userAgent: "*" }],
+            sitemap: null,
           },
           "deploy-preview": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
             host: null,
+            policy: [{ disallow: ["/"], userAgent: "*" }],
+            sitemap: null,
+          },
+          production: {
+            policy: [{ userAgent: "*" }],
           },
         },
       },
@@ -69,13 +64,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        background_color: `#1D2226`,
+        display: `minimal-ui`,
+        icon: `src/assets/favicon.png`,
         name: `Next Starlink Launch`,
         short_name: `Next Starlink Launch`,
         start_url: `/`,
-        background_color: `#1D2226`,
         theme_color: `#161528`,
-        display: `minimal-ui`,
-        icon: `src/assets/favicon.png`,
       },
     },
     {
@@ -94,9 +89,10 @@ module.exports = {
           ],
         },
         useMinify: true,
-        usePreload: true,
         usePreconnect: true,
+        usePreload: true,
       },
     },
   ],
 }
+/* eslint-enable */

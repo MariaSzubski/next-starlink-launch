@@ -30,14 +30,14 @@ const Container = ({ children, ...props }) => (
 )
 
 Container.propTypes = {
-  gutterWidth: PropTypes.number,
-  fluid: PropTypes.bool,
   children: PropTypes.node.isRequired,
+  fluid: PropTypes.bool,
+  gutterWidth: PropTypes.number,
 }
 
 Container.defaultProps = {
-  gutterWidth: 15,
   fluid: false,
+  gutterWidth: 15,
 }
 
 export { Container }

@@ -2,14 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import GlobalStyles from "../global/styles"
-import SEO from "./seo"
+import Seo from "./seo"
 
 const Layout = ({ children, ...props }) => (
   <>
-    <SEO title={props.title} />
+    <Seo title={props.title} />
     <GlobalStyles />
     <div id="site-wrapper">
-      <header><nav>nav / header</nav></header>
+      <header>
+        <nav>nav / header</nav>
+      </header>
       <main>{children}</main>
       <footer className="text-xs text-center">
         © {new Date().getFullYear()} Maria Szubski Digital, LLC
