@@ -1,25 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 
-// import { colors, screen } from "../global/vars"
-
-const LaunchCard = styled.li`
-  margin-bottom: 2rem;
-  list-style-type: none;
-  display: flex;
-
-  img {
-    width: 14rem;
-    height: 14rem;
-    object-fit: cover;
-    margin-right: 3rem;
-  }
-
-  p {
-    margin-top: 2rem;
-  }
-`
+import * as styles from "./styles.module.scss"
 
 const Page = ({ data }) => (
   <>
@@ -28,7 +10,7 @@ const Page = ({ data }) => (
       {data.launchesUpcoming.length === 0
         ? "There are currently no scheduled launches"
         : data.launchesUpcoming.map(name => (
-            <LaunchCard key={name.id}>
+            <div className={styles.launch_card} key={name.id}>
               <img
                 src={
                   name.links.flickr_images.length > 0
@@ -40,18 +22,17 @@ const Page = ({ data }) => (
               <div>
                 <strong>{name.mission_name}</strong> - {name.launch_date_local}
                 <div>
-                  <strong>Launch Site:</strong>{" "}
-                  {name.launch_site.site_name_long}
+                  <strong>Launch Site:</strong> {name.launch_site.site_name_long}
                 </div>
                 <p>{name.details}</p>
               </div>
-            </LaunchCard>
+            </div>
           ))}
     </ul>
     <h3>Past Launches</h3>
     <ul>
       {data.launchesPast.map(name => (
-        <LaunchCard key={name.id}>
+        <div className={styles.launch_card} key={name.id}>
           <img
             src={
               name.links.flickr_images.length > 0
@@ -68,7 +49,7 @@ const Page = ({ data }) => (
             </div>
             <p>{name.details}</p>
           </div>
-        </LaunchCard>
+        </div>
       ))}
     </ul>
   </>

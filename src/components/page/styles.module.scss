@@ -1,0 +1,16 @@
+.launch_card {
+  margin-bottom: 2rem;
+  list-style-type: none;
+  display: flex;
+
+  img {
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    margin-right: 3rem;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+}
