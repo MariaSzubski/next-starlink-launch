@@ -48,7 +48,7 @@ const IndexPage = () => {
         consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </div>
 
-      <Grid as="section" className="space-lg">
+      <Grid as="section">
         <div>
           {loading && <p>Loading launches...</p>}
           {error && <p>Error: ${error.message}</p>}

@@ -1,0 +1,6 @@
+.grid {
+  @include space-lg;
+  margin: auto;
+  max-width: none;
+  display: grid;
+}

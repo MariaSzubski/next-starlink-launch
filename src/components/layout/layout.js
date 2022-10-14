@@ -1,13 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import GlobalStyles from "../global/styles"
 import Seo from "./seo"
 
 const Layout = ({ children, ...props }) => (
   <>
     <Seo title={props.title} />
-    <GlobalStyles />
     <div id="site-wrapper">
       <header>
         <nav>nav / header</nav>
