@@ -1,0 +1,10 @@
+@mixin space-lg {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+  border: 10px solid blue;
+
+  :first-of-type {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}

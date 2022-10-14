@@ -1,3 +1,5 @@
+const path = require("path")
+
 /* eslint-disable */
 module.exports = {
   siteMetadata: {
@@ -12,7 +14,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
@@ -73,6 +74,20 @@ module.exports = {
         short_name: `Next Starlink Launch`,
         start_url: `/`,
         theme_color: `#161528`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        additionalData: `@use 'mixins' as *;`,
+        cssLoaderOptions: {
+          modules: {
+            localIdentName: "[local]-[hash:base64:3]",
+          },
+        },
+        sassOptions: {
+          includePaths: [path.join(__dirname, "src/styles")],
+        },
       },
     },
     {
