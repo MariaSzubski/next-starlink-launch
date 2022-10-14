@@ -1,3 +1,5 @@
+const path = require("path")
+
 /* eslint-disable */
 module.exports = {
   siteMetadata: {
@@ -8,13 +10,14 @@ module.exports = {
   },
   trailingSlash: "never",
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -71,6 +74,20 @@ module.exports = {
         short_name: `Next Starlink Launch`,
         start_url: `/`,
         theme_color: `#161528`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        additionalData: `@use 'mixins' as *;`,
+        cssLoaderOptions: {
+          modules: {
+            localIdentName: "[local]-[hash:base64:3]",
+          },
+        },
+        sassOptions: {
+          includePaths: [path.join(__dirname, "src/styles")],
+        },
       },
     },
     {

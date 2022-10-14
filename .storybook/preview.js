@@ -29,6 +29,4 @@ const withGlobalStyles = s => (
   </>
 )
 
-export const decorators = [
-  withGlobalStyles,
-];
+export const decorators = [withGlobalStyles]

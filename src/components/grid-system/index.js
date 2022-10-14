@@ -1,6 +1,6 @@
 // CSS Flex
 import { Container } from "./container"
-import { Flex } from "./flex"
+import { Flex } from "./flex/index"
 import { Col } from "./col"
 
 // CSS Grid

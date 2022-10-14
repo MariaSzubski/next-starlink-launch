@@ -2,14 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { screen } from "../global/vars"
+import { screen } from "../../global/vars"
+
+import * as styles from "./styles.module.scss"
 
 const SGrid = styled.div`
   padding: ${props => `0rem ${props.$gap}`};
-  margin: auto;
-  max-width: none;
-
-  display: grid;
   justify-content: ${props => props.$justify};
   align-items: ${props => props.$align};
   grid-gap: ${props => props.$gap};
@@ -41,6 +39,7 @@ const Grid = ({ children, ...props }) => (
     $mobile={props.mobile ? props.mobile : props.template}
     $justify={props.justify}
     $align={props.align}
+    className={styles.grid}
     {...props}
   >
     {children}

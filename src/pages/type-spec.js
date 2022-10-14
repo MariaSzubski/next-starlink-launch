@@ -17,7 +17,7 @@ const IndexPage = () => (
       ipsum dolor sit amet, consectetur adipiscing elit.
     </div>
 
-    <Grid as="section" className="space-lg">
+    <Grid as="section">
       <div>Content 1</div>
       <div>Content 2</div>
       <div>Content 3</div>

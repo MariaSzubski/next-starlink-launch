@@ -2,17 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { screen } from "../global/vars"
+import { screen } from "../../global/vars"
+
+import * as styles from "./styles.module.scss"
 
 const SCol = styled.div`
   padding: ${props => (props.$fluid ? "0rem" : "0rem 1.4rem")};
-  flex-grow: 0;
-  flex-shrink: 0;
-  min-height: 1px;
-  position: relative;
-  left: 0;
-  right: 0;
-  max-width: 100%;
 
   width: ${props => props.$xs[0]};
   max-width: ${props => props.$xs[0]};
@@ -57,25 +52,16 @@ const Col = ({ children, offset, ...props }) => {
   const md = props.md || props.sm || props.xs || 12
   const lg = props.lg || props.md || props.sm || props.xs || 12
   const xl = props.xl || props.lg || props.md || props.sm || props.xs || 12
-  const xxl =
-    props.xxl || props.xl || props.lg || props.md || props.sm || props.xs || 12
+  const xxl = props.xxl || props.xl || props.lg || props.md || props.sm || props.xs || 12
 
   /* eslint-disable */
   const $offset = {
-
     xs: offset.xs || 0,
     sm: offset.sm || offset.xs || 0,
     md: offset.md || offset.sm || offset.xs || 0,
     lg: offset.lg || offset.md || offset.sm || offset.xs || 0,
     xl: offset.xl || offset.lg || offset.md || offset.sm || offset.xs || 0,
-    xxl:
-      offset.xxl ||
-      offset.xl ||
-      offset.lg ||
-      offset.md ||
-      offset.sm ||
-      offset.xs ||
-      0,
+    xxl: offset.xxl || offset.xl || offset.lg || offset.md || offset.sm || offset.xs || 0,
   }
   /* eslint-enable */
 
@@ -93,6 +79,7 @@ const Col = ({ children, offset, ...props }) => {
       $lg={[calculate(lg), calculate($offset.lg)]}
       $xl={[calculate(xl), calculate($offset.xl)]}
       $xxl={[calculate(xxl), calculate($offset.xxl)]}
+      className={styles.col}
       {...props}
     >
       {children}
@@ -115,7 +102,7 @@ Col.propTypes = {
   xl: PropTypes.number,
   xxl: PropTypes.number,
 
-    /* eslint-enable */
+  /* eslint-enable */
 }
 
 Col.defaultProps = {
@@ -123,7 +110,7 @@ Col.defaultProps = {
   fluid: false,
   justify: "flex-start",
   nowrap: false,
-    /* eslint-disable */
+  /* eslint-disable */
   offset: {
     xs: null,
     sm: null,
@@ -139,7 +126,7 @@ Col.defaultProps = {
   xl: null,
   xxl: null,
 
-    /* eslint-enable */
+  /* eslint-enable */
 }
 
 export { Col }
