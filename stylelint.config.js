@@ -1,4 +1,10 @@
 module.exports = {
+  overrides: [
+    {
+      files: ["**/*.scss"],
+      customSyntax: "postcss-scss",
+    },
+  ],
   extends: ["stylelint-config-prettier"],
   ignoreFiles: ["**/*.js"],
   plugins: ["stylelint-scss"],
@@ -8,8 +14,8 @@ module.exports = {
       {
         except: ["blockless-after-same-name-blockless", "first-nested"],
         ignore: ["after-comment"],
-        ignoreAtRules: ["else", "custom-selector"]
-      }
+        ignoreAtRules: ["else", "custom-selector"],
+      },
     ],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always",
@@ -19,8 +25,8 @@ module.exports = {
     "block-closing-brace-newline-after": [
       "always",
       {
-        ignoreAtRules: ["if", "else"]
-      }
+        ignoreAtRules: ["if", "else"],
+      },
     ],
     "block-closing-brace-newline-before": "always",
     "block-no-empty": true,
@@ -31,8 +37,8 @@ module.exports = {
       "always",
       {
         except: ["first-nested"],
-        ignore: ["after-comment", "stylelint-commands"]
-      }
+        ignore: ["after-comment", "stylelint-commands"],
+      },
     ],
     "comment-no-empty": true,
     "comment-whitespace-inside": "always",
@@ -40,8 +46,8 @@ module.exports = {
       "always",
       {
         except: ["after-custom-property", "first-nested"],
-        ignore: ["after-comment", "inside-single-line-block"]
-      }
+        ignore: ["after-comment", "inside-single-line-block"],
+      },
     ],
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
@@ -49,11 +55,10 @@ module.exports = {
     "declaration-block-semicolon-space-before": "never",
     "declaration-block-trailing-semicolon": "always",
     "declaration-empty-line-before": [
-      "always",
+      "never",
       {
-        except: ["after-declaration", "first-nested"],
-        ignore: ["after-comment", "inside-single-line-block"]
-      }
+        ignore: ["after-declaration", "first-nested"],
+      },
     ],
     "font-family-no-duplicate-names": true,
     "function-comma-newline-after": "always-multi-line",
@@ -88,8 +93,8 @@ module.exports = {
     "rule-empty-line-before": [
       "always",
       {
-        except: ["first-nested"]
-      }
+        except: ["first-nested"],
+      },
     ],
     "scss/at-else-empty-line-before": "never",
     "scss/at-else-if-parentheses-space-before": "always",
@@ -100,15 +105,15 @@ module.exports = {
       "always",
       {
         except: ["first-nested", "after-comment", "after-dollar-variable"],
-        ignore: ["after-comment", "inside-single-line-block"]
-      }
+        ignore: ["after-comment", "inside-single-line-block"],
+      },
     ],
     "scss/double-slash-comment-empty-line-before": [
-      "always",
+      "never",
       {
         except: ["first-nested"],
-        ignore: ["between-comments", "stylelint-commands"]
-      }
+        ignore: ["between-comments", "stylelint-commands"],
+      },
     ],
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
@@ -118,11 +123,11 @@ module.exports = {
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-space-before": "never",
     "shorthand-property-no-redundant-values": true,
-    "string-quotes": "single",
+    "string-quotes": "double",
     "unit-case": "lower",
     "value-keyword-case": "lower",
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
-    "value-list-max-empty-lines": 0
-  }
+    "value-list-max-empty-lines": 0,
+  },
 }
