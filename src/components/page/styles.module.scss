@@ -1,19 +1,7 @@
-.launch_card {
-  margin-bottom: 2rem;
-  list-style-type: none;
-  display: flex;
-  border: 5px solid var(--color-green);
-  border-radius: 20px;
-  padding: 20px;
+ul {
+  padding: 0 8rem;
 
-  img {
-    width: 14rem;
-    height: 14rem;
-    object-fit: cover;
-    margin-right: 3rem;
-  }
-
-  p {
-    margin-top: 2rem;
+  li {
+    list-style-type: none;
   }
 }

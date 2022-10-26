@@ -1,9 +1,8 @@
 @mixin space-lg {
   margin-top: 12rem;
   margin-bottom: 12rem;
-  border: 1px solid var(--color-blue);
 
-  :first-of-type {
+  & > :first-of-type {
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
@@ -13,7 +12,7 @@
   margin-top: 4rem;
   margin-bottom: 4rem;
 
-  :first-of-type {
+  & > :first-of-type {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }

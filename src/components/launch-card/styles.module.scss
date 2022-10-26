@@ -1,0 +1,63 @@
+.launch_card {
+  background-color: #fffe;
+  color: var(--color-navy);
+
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  h3 {
+    margin: 2rem 0;
+  }
+
+  p {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.hero {
+  position: relative;
+  min-width: 32rem;
+  min-height: 32rem;
+  margin-right: 3rem;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details {
+  width: 100%;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.pos {
+  font-weight: bold;
+  color: var(--color-green);
+}
+
+.neg {
+  font-weight: bold;
+  color: var(--color-yellow);
+}
+
+.desc {
+  margin-top: 2rem;
+}
