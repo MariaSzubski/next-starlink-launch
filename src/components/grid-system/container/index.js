@@ -8,6 +8,7 @@ import * as styles from "./styles.module.scss"
 
 const SContainer = styled.div`
   padding: ${props => (props.$fluid ? "0rem" : "0rem 1.4rem")};
+  margin: auto;
   @media ${screen.min.sm} {
     max-width: ${props => (props.$fluid ? "none" : "54rem")};
   }
