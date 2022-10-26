@@ -8,8 +8,10 @@ import * as styles from "./styles.module.scss"
 
 const SGrid = styled.div`
   padding: ${props => `0rem ${props.$gap}`};
-  justify-content: ${props => props.$justify};
-  align-items: ${props => props.$align};
+  ${
+    "" /* justify-content: flex-end;
+  align-items: flex-end; */
+  }
   grid-gap: ${props => props.$gap};
   grid-template-columns: ${props => props.$mobile};
 

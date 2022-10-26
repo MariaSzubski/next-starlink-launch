@@ -8,6 +8,8 @@ import * as styles from "./styles.module.scss"
 
 const SCol = styled.div`
   padding: ${props => (props.$fluid ? "0rem" : "0rem 1.4rem")};
+  justify-self: ${props => props.$justify};
+  align-self: ${props => props.$align};
 
   width: ${props => props.$xs[0]};
   max-width: ${props => props.$xs[0]};
