@@ -49,7 +49,7 @@ LaunchCard.propTypes = {
   mission_name: PropTypes.string,
   launch_date_local: PropTypes.string,
   launch_success: PropTypes.bool,
-  launch_site: PropTypes.string,
+  launch_site: PropTypes.object,
   details: PropTypes.string,
 }
 

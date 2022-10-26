@@ -14,8 +14,8 @@ const Page = ({ data }) => (
           <li>There are currently no scheduled launches</li>
         ) : (
           data.launchesUpcoming.map(name => (
-            <li>
-              <LaunchCard {...name} key={name.id} />
+            <li key={name.id}>
+              <LaunchCard {...name} />
             </li>
           ))
         )}
@@ -25,8 +25,8 @@ const Page = ({ data }) => (
       <h3>Past Launches</h3>
       <ul>
         {data.launchesPast.map(name => (
-          <li>
-            <LaunchCard {...name} key={name.id} />
+          <li key={name.id}>
+            <LaunchCard {...name} />
           </li>
         ))}
       </ul>
